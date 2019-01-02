@@ -27,6 +27,6 @@ A few points of clarification:
 
 Here is a table of all the posts, data, and scripts in chronological order:
 
-Date | Post link | Data | Script | Description 
-- | - | - | - | -
-na | na | na | na | na 
+| Date | Post link | Data | Script | Description 
+| - | - | - | - | -
+| na | na | na | na | na 
