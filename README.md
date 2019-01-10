@@ -4,24 +4,7 @@ A repo to provide a central location for the files and data used in my weekly po
 
 <br />
 
-The structure of the repository is thus:
-
-```
-Repo
-│   README.md
-│   file001.txt    
-│
-└───data
-│   │   ex_data_1.csv
-│   │   ex_data_2.csv
-│   │
-│   
-└───scripts
-    │   ex_script_1.R
-    │   ex_script_1.R
-```
-
-A few points of clarification:
+A few housekeeping notes:
 
 - The `/data` subdirectory is a list of all the data used in each post, cleaned up and ready to be imported.
 - The `/scripts` subdirectory contains scripts that analyze the datasets. These scripts are made of all the same code included in the posts, but the commentary is stripped away.
