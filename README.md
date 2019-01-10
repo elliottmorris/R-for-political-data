@@ -19,4 +19,4 @@ Here is a table of all the posts, data, and scripts in chronological order:
 | Date | Post link | Data | Script | Title 
 | - | - | - | - | -
 | 2019-01-04 | [🔗](https://www.thecrosstab.com/2019/01/04/how-much-has-congress-polarized/) | [🔗](https://voteview.com/static/data/out/members/Hall_members.csv) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/scripts/2019_01_04_polarization_in_congress.R) | Polarization in the 115h Congress
-| 2019-01-04 | [🔗](https://www.thecrosstab.com/2019/01/11/2020-cnn-poll-favs/) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/data/2019_01_11_cnn_poll.csv) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/scripts/2019_01_11_cnn_poll.R) | This Early Before 2020, It’s All About Name Recognition
+| 2019-01-11 | [🔗](https://www.thecrosstab.com/2019/01/11/2020-cnn-poll-favs/) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/data/2019_01_11_cnn_poll.csv) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/scripts/2019_01_11_cnn_poll.R) | This Early Before 2020, It’s All About Name Recognition
