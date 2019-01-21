@@ -1,4 +1,4 @@
-# rpolidata
+# R for political data analysis
 
 A repo to provide a central location for the files and data used in my weekly posts on analyzing political data in R, which you can read [on my blog](http://www.thecrosstab./com). If you're looking for a more guided introduction to the topic, consider taking my course ["Analyzing Polling and Election Data in R" at DataCamp.com](https://www.datacamp.com/courses/analyzing-election-and-polling-data-in-r).
 
