@@ -24,7 +24,7 @@ gg <- ggplot(house_ideo,
   scale_color_manual("Party",values=c("Republican"="#E74C3C","Democratic"="#3498DB")) +
   labs(x="DW-NOMINATE Ideology\n(Dimension 1)",
        y="DW-NOMINATE Ideology\n(Dimension 2)",
-       title="Ocasio-Cortez Doesn't Look so Socialist",
+       title="Ocasio-Cortez Doesn't Look So Socialist",
        subtitle="Could this be due to a weakness in algorithms that are based on roll call votes",
        caption="Source: VoteView.com") +
   theme(legend.position = 'none')
