@@ -1,16 +1,16 @@
 # R for political data analysis
 
-A repo to provide a central location for the files and data used in my weekly posts on analyzing political data in R, which you can read [on my blog](http://www.thecrosstab./com). If you're looking for a more guided introduction to the topic, consider taking my course ["Analyzing Polling and Election Data in R" at DataCamp.com](https://www.datacamp.com/courses/analyzing-election-and-polling-data-in-r). And, of course, check out my R package [`politicaldata`](https://github.com/elliottmorris/politicaldata) that makes downloading and analyzing a lot of these data much easier.
+A repo to provide a central location for the files and data used in my [weekly posts](http://www.thecrosstab.com/) on analyzing political data in R. Inspired by the folks participating in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday), I'm really intending this to be an introduction to techniques of data science that have real world applied use cases. Again, read more [on my blog](https://www.thecrosstab.com/project/r-for-political-data-science-weekly/). 
 
-<br />
+If you're looking for a more guided introduction to the topic, consider taking my course ["Analyzing Polling and Election Data in R" at DataCamp.com](https://www.datacamp.com/courses/analyzing-election-and-polling-data-in-r). And, of course, check out my R package [`politicaldata`](https://github.com/elliottmorris/politicaldata) that makes downloading and analyzing a lot of these data even easier.
 
-A few housekeeping notes:
+
+# Housekeeping
 
 - The `/data` subdirectory is a list of all the data used in each post, cleaned up and ready to be imported.
 - The `/scripts` subdirectory contains scripts that analyze the datasets. These scripts are made of all the same code included in the posts, but the commentary is stripped away.
 
-
-<br />
+If your code doesn't work, make sure you've removed references to my personal R theme, `theme_elliott()`. Might I suggest replacing it with `theme_minimal()`. If you're still having trouble, open an issue with a reproducible example (which you can generate easily in R using [`reprex`](https://github.com/tidyverse/reprex)).
 
 ## Data and posts 
 
