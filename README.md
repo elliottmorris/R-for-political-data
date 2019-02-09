@@ -34,7 +34,7 @@ Here is a table of all the posts, data, and scripts in chronological order:
 | 2019-01-18 | [🔗](https://www.thecrosstab.com/2019/01/18/how-tax-rates-work-1970s/) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/scripts/2019_01_18_how_marginal_tax_rates_work.R) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/scripts/2019_01_18_how_marginal_tax_rates_work.R) | How Marginal Tax Rates Work
 | 2019-01-25 | [🔗](https://www.thecrosstab.com/2019/01/25/counterintuitive-no-votes/) | [🔗](https://voteview.com/static/data/out/members/Hall_members.csv) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_01_25_counterintuitive_no_votes.R) | What Happens To Our Algorithms When Socialists Vote in Congress
 | 2019-02-01 | [🔗](https://www.thecrosstab.com/2019/02/01/distribution-of-voters/) | [🔗](https://www.voterstudygroup.org/data) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_02_01_distribution_of_voters.R) | The Ideological Diversity of the American Electorate
-| 2019-02-08 | [](ttps://www.thecrosstab.com/2019/02/08/how-liberal-2020-dems/) | [](https://github.com/elliottmorris/Rpolidata/blob/master/data/2019_02_08_how_liberal_2020_dems.csv) | [](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_02_08_how_liberal_2020_dems.R)
+| 2019-02-08 | [🔗](https://www.thecrosstab.com/2019/02/08/how-liberal-2020-dems/) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/data/2019_02_08_how_liberal_2020_dems.csv) | [](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_02_08_how_liberal_2020_dems.R) | Just How Liberal Are the 2020 Democratic Candidates?
 
 
 
