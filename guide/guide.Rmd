@@ -1,11 +1,12 @@
 ---
-title: "A Guide to Analyzing Political Data in R"
+title: "A Guide to Analyzing (American) Political Data in R"
 subtitle: "A long tutorial about wrangling, modeling, and visualizing political data in R."
 author: "G. Elliott Morris"
 date: "This version: `r format(Sys.Date(),format='%B %d, %Y')`"
 output: 
   tint::tintHtml:
     highlight: tango
+    css: css.css
 bibliography: skeleton.bib
 link-citations: yes
 ---
@@ -30,7 +31,7 @@ source("render_toc.R")
 \  
 
 
-_A work in progress. Read more about the project [here](https://github.com/elliottmorris/R-for-political-data) and [here](#to-come)._
+_A work in progress. Read more about the project [here](https://www.thecrosstab.com/project/r-politics-guide/) and [here](#to-come)._
 
 
 \  
@@ -98,7 +99,7 @@ Onward.
 # Introduction: What Data Offer Us {#introduction}
 
 
-`r tint::newthought("Let me first offer")` an old story from the early days of American election statistics that illustrates beautifully why data are useful in in covering the subject:
+`r tint::newthought("Let me first offer")` an old story from the early days of American election statistics that illustrates beautifully why data are useful in covering the subject:
 
 
 The year is 1952, and World War II super-General Dwight D Eisenhower was facing off against Illinois Governor Adlai Stevenson for the presidency. Pundits went in to the night thinking that Stevenson was ahead, an impression given to them largely by public opinion polling (which, in its earlier days, was not as scientifically sound as it is today). As the votes begin to roll in, a state-of-the-art computer called UNIVAC --- which could fill your entire kitchen and living room, if you were lucky --- predicted early that Eisenhower would win the election with 438 electoral votes, giving him a 100% chance of defeating Stevenson. 

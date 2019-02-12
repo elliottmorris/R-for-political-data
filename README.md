@@ -9,7 +9,7 @@ If you're looking for a more guided introduction to the topic, consider taking m
 
 ### A Guide to Analyzing Political Data in R
 
-Please see [this document](https://www.thecrosstab.com/project/guide/) for my guide on how to analyze and visualize political data in R, which compiles much of the work here into a longer, more cohesive format. It is not quite long enough to be a book, but will (in the end) be fairly comprehensive. The materials for this text can be found in the `/guide/` subdirectory.
+I am preparing [a guide](https://www.thecrosstab.com/project/r-politics-guide/) on how to analyze and visualize political data in R, which compiles much of the work here into a longer, more cohesive format. It is not quite long enough to be a book, but will (in the end) be fairly comprehensive. The materials for this text can be found in the `/guide/` subdirectory.
 
 
 ### Housekeeping
