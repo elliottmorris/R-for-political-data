@@ -5,7 +5,6 @@ author: "G. Elliott Morris"
 date: "This version: `r format(Sys.Date(),format='%B %d, %Y')`"
 output: 
   tint::tintHtml:
-    highlight: tango
     css: css.css
 bibliography: skeleton.bib
 link-citations: yes
@@ -13,9 +12,9 @@ link-citations: yes
 
 ```{r setup, include=FALSE}
 # load up the necessary packages 
-
 library(tint)
 library(knitr)
+
 # invalidate cache when the package version changes
 knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'),
                      echo = F,warning = F,message = F)
@@ -329,9 +328,7 @@ knitr::include_graphics('figures/hispanics_dem_diff_2008_2016.png')
 
 From the fit between the points, there's clear evidence that states with more hispanics resisted the urge to move right between 2008 and 2016. But perhaps we're looking at the wrong thing here. Rather than looking at the share of a state that is Hispanic/Latino, maybe we should take into account that other non-white groups could have had similar population dynamics and instead simply look at the share of a state that is white. Maybe beyond that, we can look at the share of a state that is white _and_ does not hold a college degree, as political science evidence is pretty clear^[See Schaffner, Brian, Matthew MacWilliams and Tatishe Nteta, 2018, ["Understanding White Polarization in the 2016 Vote for President: The Sobering Role of Sexism and Racism,"](https://onlinelibrary.wiley.com/doi/full/10.1002/polq.12737) _Political Science Quarterly_.] on the relationship between having a college education and leaning Democratic.
 
-`r tint::margin_note('Special thanks to Jason Timm for the [tutorial](https://github.com/jaytimm/American_political_data_and_R) on getting census data into R.')`
-
-We take the same approach as above, except this time, I'm downloading the data from the Census Bureau directly into R. To do this, I use the `tidycensus` package. If you want to replicate the work you will need to save your own API key to your R environment.The  guide for how to use tidycensus can be found [in the documentation](https://walkerke.github.io/tidycensus/articles/basic-usage.html) written by Kyle Walker. You'll also need to get an API key from [The Census Bureau](https://api.census.gov/data/key_signup.html).
+We take the same approach as above, except this time, I'm downloading the data from the Census Bureau directly into R. To do this, I use the `tidycensus` package^[My thanks to Jason Timm for writing a [tutorial](https://github.com/jaytimm/American_political_data_and_R) on getting census data into R.]. If you want to replicate the work you will need to save your own API key to your R environment. The guide for how to use tidycensus can be found [in the documentation](https://walkerke.github.io/tidycensus/articles/basic-usage.html) written by Kyle Walker. You'll also need to get an API key from [The Census Bureau](https://api.census.gov/data/key_signup.html).
 
 First, we'll get the census data. Then, we combine the census data with the `pres_map_change` data.frame that we made earlier. Go up a few blocks if you've forgotten how that was made. Finally, we use the now-familar `ggplot2` syntax for creating maps with simple feature objects, aka `geom_sf()`.
 
@@ -353,7 +350,6 @@ race_table <- data.frame(
           'WHITE ALONE, NOT HISPANIC OR LATINO',
           'HISPANC OR LATINO'),
   stringsAsFactors=FALSE)
-
 
 
 # get the appropriate variables from the ACS
