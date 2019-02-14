@@ -1,8 +1,8 @@
 body {
-  padding-left: 3%;
+  padding-left: 2%;
 }
 
 
-hi.title {
-  font-size: 1rem;
+.title {
+  font-size: 3rem !important;
 }
