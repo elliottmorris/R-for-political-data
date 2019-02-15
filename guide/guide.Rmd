@@ -5,6 +5,7 @@ author: "G. Elliott Morris"
 date: "This version: `r format(Sys.Date(),format='%B %d, %Y')`"
 output: 
   tint::tintHtml:
+    highlight: tango
     css: css.css
 bibliography: skeleton.bib
 link-citations: yes
