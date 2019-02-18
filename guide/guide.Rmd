@@ -4,20 +4,23 @@ subtitle: "A long tutorial about wrangling, modeling, and visualizing political 
 author: "G. Elliott Morris"
 date: "This version: `r format(Sys.Date(),format='%B %d, %Y')`"
 output: 
-  tint::tintHtml:
-    highlight: tango
+  tufte::tufte_html:
     css: css.css
+    highlight: tango
+    toc: false
 bibliography: skeleton.bib
 link-citations: yes
 ---
 
+---
+
 ```{r setup, include=FALSE}
 # load up the necessary packages 
-library(tint)
+library(tufte)
 library(knitr)
 
 # invalidate cache when the package version changes
-knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'),
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tufte'),
                      echo = F,warning = F,message = F)
 
 # update the politicaldata package to make sure we've got everything we need
@@ -28,17 +31,11 @@ source("render_toc.R")
 ```
 
 
-\  
+_This is a work in progress. Read more about the project [here](https://www.thecrosstab.com/project/r-politics-guide/) and [here](#to-come)._
 
 
-_A work in progress. Read more about the project [here](https://www.thecrosstab.com/project/r-politics-guide/) and [here](#to-come)._
-
-
-\  
-
-
-```{r  fig.fullwidth = TRUE,  fig.cap = "CBS News anchor Walter Cronkite and the UNIVAC I, which in 1952 provided the statistical prowess to make the first ever live predictions of election night. _Source: NPR_."}
-knitr::include_graphics('figures/univac_cronkite.png',dpi = 60)
+```{r  fig.fullwidth = TRUE,  fig.cap = "CBS News anchor Walter Cronkite and the UNIVAC I, which in 1952 provided the computer power to make the first ever live predictions of election night results. _Source: NPR_."}
+knitr::include_graphics('figures/univac_cronkite.png',dpi = 40)
 ```
 
 
@@ -50,9 +47,10 @@ knitr::include_graphics('figures/univac_cronkite.png',dpi = 60)
 
 
 \  
+\  
 
 
-# Contents
+# Contents {-}
 
 
 ```{r toc, echo=FALSE} 
@@ -72,7 +70,7 @@ render_toc("guide.Rmd",toc_header_name="Contents",toc_depth=1)
 # Preface: Learning About Politics Through Data (and Coding) {#preface}
 
 
-`r tint::newthought("In this short text,")` I outline some of my most commonly-deployed tools for deriving, and conveying, data-driven insights about politics with the R programming language. This is not a general-purpose introduction to polling, election statistics, etc. but rather a guide for analyst to learn about common sources of political data and build habits for efficient analysis. A slightly deeper than surface-level knowledge of the language will make this book much more accissible ^[If you're just getting started with R, you should start with the excellent **free** online text [_R for Data Science_](https://r4ds.had.co.nz) by Garrett Grolemund and Hadley Wickham.], though it is generally suitable for very new users. If you want to skip the narration and get to the programming, go ahead and skip to the portion on presidential elections.
+`r tufte::newthought("In this short text,")` I outline some of my most commonly-deployed tools for deriving, and conveying, data-driven insights about politics with the R programming language. This is not a general-purpose introduction to polling, election statistics, etc. but rather a guide for analyst to learn about common sources of political data and build habits for efficient analysis. A slightly deeper than surface-level knowledge of the language will make this book much more accissible ^[If you're just getting started with R, you should start with the excellent **free** online text [_R for Data Science_](https://r4ds.had.co.nz) by Garrett Grolemund and Hadley Wickham.], though it is generally suitable for very new users. If you want to skip the narration and get to the programming, go ahead and skip to the portion on presidential elections.
 
 
 I have been doing "data journalism," primarily about politics, for nearly 4 years now. What I've learned along the way is that it pays to be clear. However, many obstacles get in the way of clarity; deadlines can rush our work, small coding problems can bottleneck productivity, and finding data is a perennial struggle. My aim with this work is to minimize some of these obstacles. Through basic but illustrative examples, you can learn how to tackle coding problems step-by-step, with clarity and simplicity. I place two suggestions on the table to accomplish this.
@@ -88,18 +86,19 @@ _[Get the materials on GitHub](https://github.com/elliottmorris/R-for-political-
 
 ## Notes
 
-This document was prepared in the style of Edward Tufte using the [tint](http://dirk.eddelbuettel.com/code/tint.html) template for [rmarkdown](https://rmarkdown.rstudio.com) documents. I could have chosen to render the book in [bookdown](https://bookdown.org), but there is not yet a good tufte-esqe template for the online HTML generator gitbook. I think the single page approach works better anyhow, especially given that this is not a book. The code, figures, etc. are all contained in the same document and can be found [here](https://github.com/elliottmorris/R-for-political-data).
+This document was prepared in the style of Edward Tufte using elements of Dirk Eddelbuettel's [tint](https://github.com/eddelbuettel/tint) template for [rmarkdown](https://rmarkdown.rstudio.com) documents. It was rendered with the [bookdown](https://bookdown.org) backage. The code, figures, etc. are all contained in the same document and can be found [here](https://github.com/elliottmorris/R-for-political-data).
 
 Onward.
 
+`r tufte::quote_footer('--- G. Elliott Morris')`
 
 <br />
 
 
-# Introduction: What Data Offer Us {#introduction}
+# Introduction: What Data Offer Us {#intro}
 
 
-`r tint::newthought("Let me first offer")` an old story from the early days of American election statistics that illustrates beautifully why data are useful in covering the subject:
+`r tufte::newthought("Allow me first to offer")` an old story from the early days of American election statistics that illustrates beautifully why data are useful in covering the subject:
 
 
 The year is 1952, and World War II super-General Dwight D Eisenhower was facing off against Illinois Governor Adlai Stevenson for the presidency. Pundits went in to the night thinking that Stevenson was ahead, an impression given to them largely by public opinion polling (which, in its earlier days, was not as scientifically sound as it is today). As the votes begin to roll in, a state-of-the-art computer called UNIVAC --- which could fill your entire kitchen and living room, if you were lucky --- predicted early that Eisenhower would win the election with 438 electoral votes, giving him a 100% chance of defeating Stevenson. 
@@ -125,7 +124,7 @@ Such is the world we live in now, when analysts with statistical prowess rule th
 ## Getting Technical
 
 
-`r tint::newthought("It thus behooves politics-watchers")` to learn about the data that underpin almost all of that coverage. This white paper of sorts serves the purpose to introduce would-be political data analysts to the world of capability offered up to them in the R programming language and accompanying data sources. Using a package of data and functions that I designed specifically for this purpose^[Get my package for political data analysis, `politicaldata`, [on GitHub](https://github.com/elliottmorris/politicaldata)], readers will now embark on a series of tutorials that will give them all the information they need to wrangle their way to insightful political conclusions that can beat the dart-throwing chimps (er, pundits).
+`r tufte::newthought("It thus behooves politics-watchers")` to learn about the data that underpin almost all of that coverage. This white paper of sorts serves the purpose to introduce would-be political data analysts to the world of capability offered up to them in the R programming language and accompanying data sources. Using a package of data and functions that I designed specifically for this purpose^[Get my package for political data analysis, `politicaldata`, [on GitHub](https://github.com/elliottmorris/politicaldata)], readers will now embark on a series of tutorials that will give them all the information they need to wrangle their way to insightful political conclusions that can beat the dart-throwing chimps (er, pundits).
 
 
 ```{r fig.margin=TRUE, fig.cap='The banner for my course ["Analyzing Election and Polling Data in R"](https://campus.datacamp.com/courses/analyzing-election-and-polling-data-in-r) at DataCamp.com.'}
@@ -140,10 +139,10 @@ This whitepaper of sorts will henceforth switch into an interwoven text of regul
 <br />
 
 
-# Dive in: Mapping Presidential Elections {#mapping-pres-elections}
+# Dive in: Mapping Presidential Election Results {#mapping-pres-elects}
 
 
-`r tint::newthought("Presdential elections are the big fish")` in the pond of political journalism. Campaigns and super PACs spend billions of dollars in their efforts to get elected. Media outlets absorb much of this cash in ad revenue and in turn spend an enormous amount of time and resources covering the campaigns,^[See Nicholas Confessore and Karen Yourish, 2016, ["$2 Billion Worth of Free Media for Donald Trump,"](https://www.nytimes.com/2016/03/16/upshot/measuring-donald-trumps-mammoth-advantage-in-free-media.html) _New York Times_.] both on air and during commercials. In recent years, spending on and attention to presidential elections has only continued to increase.
+`r tufte::newthought("Presdential elections are the big fish")` in the pond of political journalism. Campaigns and super PACs spend billions of dollars in their efforts to get elected. Media outlets absorb much of this cash in ad revenue and in turn spend an enormous amount of time and resources covering the campaigns,^[See Nicholas Confessore and Karen Yourish, 2016, ["$2 Billion Worth of Free Media for Donald Trump,"](https://www.nytimes.com/2016/03/16/upshot/measuring-donald-trumps-mammoth-advantage-in-free-media.html) _New York Times_.] both on air and during commercials. In recent years, spending on and attention to presidential elections has only continued to increase.
 
 
 The online world of political journalism has also exploded in popularity. With data sources and statistical/graphical programming tools only getting easier to use, the barrier of entry into the space has been dramatically lowered. For R users, this could not be easier. 
@@ -152,7 +151,7 @@ The online world of political journalism has also exploded in popularity. With d
 ## Plotting state-level election results
 
 
-`r tint::newthought("Here I show you how")` to import election results from my `politicaldata` package, combine it with a map, and plot it with the popular `ggplot2` package from Hadley Wickham and others:
+`r tufte::newthought("Here I show you how")` to import election results from my `politicaldata` package, combine it with a map, and plot it with the popular `ggplot2` package from Hadley Wickham and others:
 
 
 ```{r echo=TRUE}
@@ -278,7 +277,7 @@ gg <- ggplot(pres_hispanic,
              col='black') +
   geom_sf() +
   coord_sf(crs = "+proj=aea +lat_1=25 +lat_2=50 +lon_0=-100",ndiscr = 0) + # change the projection from mercator (blegh)
-  scale_fill_gradient("Percent of state that is\nHispanic and/or Latino",
+  scale_fill_gradient("Percent of state population that is\nHispanic and/or Latino",
                     high='orange',low='gray80') +
   theme_void()  +
   theme(legend.position='bottom')
@@ -420,7 +419,7 @@ gg <- ggplot(pres_college,
              col='black') +
   geom_sf() +
   coord_sf(crs = "+proj=aea +lat_1=25 +lat_2=50 +lon_0=-100",ndiscr = 0) + # change the projection from mercator (blegh)
-  scale_fill_gradient("Percent of state that is\nnon-college educated White",
+  scale_fill_gradient("Percent of state population that is\nnon-college educated White",
                     high='#138D75',low='gray80') +
   theme_void()  +
   theme(legend.position='bottom')
@@ -499,8 +498,6 @@ knitr::include_graphics('figures/pres_history_ggfacet.png')
 ```
 
 
-...
-
 
 \  
 \  
@@ -521,6 +518,7 @@ There's much more to learn here, and I'll be adding to this document until I'm s
 - Visualizing congressional election results
 - Combining demographic and election data
 - Exploring lawmakers' political ideologies
+- Examples/types of cluster analysis
 
 
 For those asking, I probably won't get into election prediction here. In the interests of accessibility and efficient use of time this decision is probably for the best.
