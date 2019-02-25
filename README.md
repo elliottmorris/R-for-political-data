@@ -36,6 +36,8 @@ Here is a table of all the posts, data, and scripts in chronological order:
 | 2019-02-01 | [🔗](https://www.thecrosstab.com/2019/02/01/distribution-of-voters/) | [🔗](https://www.voterstudygroup.org/data) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_02_01_distribution_of_voters.R) | The Ideological Diversity of the American Electorate
 | 2019-02-08 | [🔗](https://www.thecrosstab.com/2019/02/08/how-liberal-2020-dems/) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/data/2019_02_08_how_liberal_2020_dems.csv) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_02_08_how_liberal_2020_dems.R) | Just How Liberal Are the 2020 Democratic Candidates?
 | 2019-02-15 | [🔗](https://www.thecrosstab.com/2019/02/15/2020-twitter-primary/) | [🔗](https://github.com/elliottmorris/Rpolidata/blob/master/data/2019_02_15_2020_twitter_primary.Rdata) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_02_15_2020_twitter_primary.R) | The 2020 Twitter Primary
+| 2019-02-22 | [🔗](https://www.thecrosstab.com/2019/02/22/four-parties/) | [🔗](https://www.voterstudygroup.org/data) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_02_22_four_parties.R) | Four Parties in America? Probably Not Anytime Soon.
+
 
 
 
