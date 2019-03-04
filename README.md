@@ -1,5 +1,6 @@
 # R for Political Data Science
 
+
 A repository to provide a central location for the files and data used in my [weekly posts](https://www.thecrosstab.com/project/r-for-political-data-science-weekly/) on analyzing political data in R. Inspired by the folks participating in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday), I'm really intending this to be an introduction to techniques of data science that have real world applied use cases. Again, read more [on my blog](https://www.thecrosstab.com/project/r-for-political-data-science-weekly/). 
 
 ### My DataCamp Course and R Package
