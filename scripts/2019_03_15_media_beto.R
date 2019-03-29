@@ -11,7 +11,7 @@ library(stringi)
 source("~/setup_elliott.R")
 
 # data from last x days --------
-ENDDATE   <- ymd(Sys.Date())
+ENDDATE   <- ymd("2019-03-18")
 STARTDATE <- ymd("2019-03-14")
 
 days <- seq(from=STARTDATE,
