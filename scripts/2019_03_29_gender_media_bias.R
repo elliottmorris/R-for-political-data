@@ -7,7 +7,7 @@ library(tidyverse)
 library(tidytext) #devtools::install_github("juliasilge/tidytext")
 library(lubridate)
 library(stringi)
-library(ggthemes)
+library(ggthemes) #devtools::install_github("jrnold/ggthemes")
 
 # data from last x days --------
 ENDDATE   <- ymd("2019-03-17")
