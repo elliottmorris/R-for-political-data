@@ -2,16 +2,14 @@
 # more = http://tidytextmining.com/_book/intro.html
 
 # setup -------------
-rm(list=ls())
 library(newsflash) # devtools::install_github("hrbrmstr/newsflash")
 library(tidyverse)
 library(tidytext) #devtools::install_github("juliasilge/tidytext")
 library(lubridate)
 library(stringi)
-source("~/setup_elliott.R")
 
 # data from last x days --------
-ENDDATE   <- ymd("2019-03-18")
+ENDDATE   <- ymd("2019-03-17")
 STARTDATE <- ymd("2019-03-14")
 
 days <- seq(from=STARTDATE,
@@ -25,17 +23,22 @@ chyrons_objects <- as.data.frame(list_chyrons()) %>%
   filter(ts %in% days, type == "cleaned")
 
 chyrons <- data.frame(NULL)
-for(i in 1:nrow(chyrons_objects)){
-  print(paste("Fetching chyrons for ",chyrons_objects[i,]$ts))
-  chyrons <- chyrons %>%
-    bind_rows(read_chyrons(chyrons_objects[i,]$ts) %>%
-                mutate(channel = gsub("BBCNEWS","BBC",channel),
-                       channel = gsub("CNNW","CNN",channel),
-                       channel = gsub("MSNBCW","MSNBC",channel),
-                       channel = gsub("FOXNEWSW","FOX",channel)) %>% 
-                filter(channel %in% c("CNN","MSNBC","FOX"))
-    )
-}
+# uncomment these lines if you haven't downloaded the data yet. I'm commenting and loading to save time:
+# for(i in 1:nrow(chyrons_objects)){
+#   #print(paste("Fetching chyrons for ",chyrons_objects[i,]$ts))
+#   chyrons <- chyrons %>%
+#     bind_rows(read_chyrons(chyrons_objects[i,]$ts) %>%
+#                 mutate(channel = gsub("BBCNEWS","BBC",channel),
+#                        channel = gsub("CNNW","CNN",channel),
+#                        channel = gsub("MSNBCW","MSNBC",channel),
+#                        channel = gsub("FOXNEWSW","FOX",channel)) %>% 
+#                 filter(channel %in% c("CNN","MSNBC","FOX"))
+#     )
+# }
+
+# load the data (comment out if you haven't downloaded yet)
+load(file='data/2019_03_15_beto_media_data.RData')
+
 
 # tokenize words ----------
 # get words
@@ -101,7 +104,7 @@ gg <- ggplot(mention_by_time_chyron,aes(x=time, y=n, col=channel,fill=channel)) 
   scale_fill_manual("Network",values=c("CNN"="#F8C471","FOX"="#EC7063","MSNBC"="#5DADE2","BBC"="#D2B4DE")) +
   coord_cartesian(ylim=c(0,max(mention_by_time_chyron$n)))
 
-preview(gg)
+print(gg)
 
 
 
