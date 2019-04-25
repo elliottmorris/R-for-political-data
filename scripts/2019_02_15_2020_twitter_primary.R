@@ -1,3 +1,4 @@
+rm(list=ls())
 library(tidyverse)
 library(tidytext)
 library(rtweet)
@@ -9,7 +10,8 @@ candidates <- c('@CoryBooker','@PeteButtigieg','@JulianCastro',
 
 
 # get most recent 3200 tweets for each candidate
-tweets_2020_cands <- get_timelines(candidates, n = 3200, retryonratelimit =TRUE)
+# tweets_2020_cands <- get_timelines(candidates, n = 3200, retryonratelimit =TRUE) # uncomment if not already downloaded
+load('data/2019_02_15_2020_twitter_primary.RData')
 
 # filter dataset to tweets from Jan 1
 since_jan <- tweets_2020_cands %>%
@@ -43,6 +45,7 @@ gg <- ggplot(cumul_tweets,aes(x=reorder(screen_name,num_tweets),
 
 library(tidytext)
 bing <- get_sentiments("bing")
+
 # initial text cleaning and word tokens
 remove_reg <- "&amp;|&lt;|&gt;"
 
@@ -101,6 +104,8 @@ gg <- ggplot(pos_neg,aes(x=reorder(screen_name,freq),
        y="Percentage of Total Words That Are Positive",
        caption="Source: Tweets scraped using @kearneymw `rtweet` package")
 
+print(gg)
+
 nrc <- get_sentiments("nrc")
 
 # sentiment by candidate
@@ -131,3 +136,5 @@ gg <- ggplot(nrc_grouped,aes(x=reorder(screen_name,freq),y=freq,col=screen_name,
        x="Candidate",
        y="Percentage of Total Words",
        caption="Source: Tweets scraped using @kearneymw `rtweet` package")
+
+print(gg)
