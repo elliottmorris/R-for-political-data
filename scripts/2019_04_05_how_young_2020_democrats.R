@@ -43,7 +43,7 @@ gg <- ggplot() +
   labs(title="2020 Democratic Candidates By Age",
        x="Year",
        y="",
-       subtitle="Gen X: the not-so-forgotten generation") +
+       subtitle="  ") +
   theme(legend.position = 'none')
 
 print(gg)
