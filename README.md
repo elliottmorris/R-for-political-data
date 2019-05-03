@@ -1,7 +1,7 @@
 # R for Political Data Science
 
-
 A repository to provide a central location for the files and data used in my [weekly posts](https://www.thecrosstab.com/project/r-for-political-data-science-weekly/) on analyzing political data in R. Inspired by the folks participating in [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday), I'm really intending this to be an introduction to techniques of data science that have real world applied use cases. Again, read more [on my blog](https://www.thecrosstab.com/project/r-for-political-data-science-weekly/). 
+
 
 ### My DataCamp Course and R Package
 
@@ -10,7 +10,7 @@ If you're looking for a more guided introduction to the topic, consider taking m
 
 ### A Guide to Analyzing Political Data in R
 
-I am preparing [a guide](https://www.thecrosstab.com/project/r-politics-guide/) on how to analyze and visualize political data in R, which compiles much of the work here into a longer, more cohesive format. It is not quite long enough to be a book, but will (in the end) be fairly comprehensive. The materials for this text can be found in the `/guide/` subdirectory.
+I am preparing [a guide](https://www.thecrosstab.com/project/r-politics-guide/) on how to analyze and visualize political data in R, which compiles much of the work here into a longer, more cohesive format. It is not quite long enough to be a book, but will (in the end) be fairly comprehensive. The materials for this text can be found in the `/guide/` subdirectory. This is tangential to the original purpose of this repository and may eventually get its own home.
 
 
 ### Housekeeping
@@ -44,4 +44,8 @@ Here is a table of all the posts, data, and scripts in chronological order:
 | 2019-03-22 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_03_22_economic_voting.R) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_03_22_economic_voting.R) | [Do Voters Still Care About The Economy?](https://www.thecrosstab.com/2019/03/22/economic-voting/)
 | 2019-03-29 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/data/2019_03_29_2020_media_gender_bias.RData) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_03_29_gender_media_bias.R) | [Is Media Coverage of the 2020 Democratic Primary Biased by Gender?]()
 | 2019-04-05 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/data/2019_04_05_how_young_2020_democrats.csv) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_04_05_how_young_2020_democrats.R) | [How Old/Young Are The 2020 Democratic Candidates?]()
-| 2019-04-11 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/data/2019_04_11_mayor_pete_hype.csv) | [🔗](2ttps://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_04_11_mayor_pete_hype.R) | [The Mayor Pete Hype is Real]()
+| 2019-04-12 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/data/2019_04_12_mayor_pete_hype.csv) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_04_12_mayor_pete_hype.R) | [The Mayor Pete Hype is Real]()
+| 2019-04-19 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_04_19_gop_loyal_trump.R) | [🔗](2ttps://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_04_19_gop_loyal_trump.R) | [How Loyal to Trump are Republican Voters?]()
+| 2019-04-26 |
+| 2019-05-03 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_05_03_yang_gang.R) | [🔗](2ttps://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_05_03_yang_gang.R) | [The Yang Gang Came for Me. How Many of Them Are There?]()
+
