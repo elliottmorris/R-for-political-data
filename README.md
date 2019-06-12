@@ -10,7 +10,7 @@ If you're looking for a more guided introduction to the topic, consider taking m
 
 ### A Guide to Analyzing Political Data in R
 
-I am preparing [a guide](https://www.thecrosstab.com/project/r-politics-guide/) on how to analyze and visualize political data in R, which compiles much of the work here into a longer, more cohesive format. It is not quite long enough to be a book, but will (in the end) be fairly comprehensive. The materials for this text can be found in the `/guide/` subdirectory. This is tangential to the original purpose of this repository and may eventually get its own home.
+I am preparing [a guide](https://www.thecrosstab.com/project/r-politics-guide/) on how to analyze and visualize political data in R, which compiles much of the work here into a longer, more cohesive format. It is not quite long enough to be a book, but will (in the end) be fairly comprehensive. The materials for this text ~~can be found in the `/guide/` subdirectory~~are currently being moved to a new home. This is tangential to the original purpose of this repository and may eventually get its own home.
 
 
 ### Housekeeping
@@ -48,4 +48,5 @@ Here is a table of all the posts, data, and scripts in chronological order:
 | 2019-04-19 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_04_19_gop_loyal_trump.R) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_04_19_gop_loyal_trump.R) | [How Loyal to Trump are Republican Voters?]()
 | 2019-04-26 |
 | 2019-05-03 |[🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_05_03_yang_gang.R) | [🔗](https://github.com/elliottmorris/R-for-political-data/blob/master/scripts/2019_05_03_yang_gang.R) | [The Yang Gang Came for Me. How Many of Them Are There?]()
+| 2019-05-10 |[🔗]() | [🔗]() | [It Really Matters Which Polls An Aggregate Includes, and How]()
 
