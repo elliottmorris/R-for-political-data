@@ -8,11 +8,6 @@ A repository to provide a central location for the files and data used in my [we
 If you're looking for a more guided introduction to the topic, consider taking my course ["Analyzing Polling and Election Data in R" at DataCamp.com](https://www.datacamp.com/courses/analyzing-election-and-polling-data-in-r). And, of course, check out my R package [`politicaldata`](https://github.com/elliottmorris/politicaldata) that makes downloading and analyzing a lot of these data even easier.
 
 
-### A Guide to Analyzing Political Data in R
-
-I am preparing [a guide](https://www.thecrosstab.com/project/r-politics-guide/) on how to analyze and visualize political data in R, which compiles much of the work here into a longer, more cohesive format. It is not quite long enough to be a book, but will (in the end) be fairly comprehensive. The materials for this text ~~can be found in the `/guide/` subdirectory~~are currently being moved to a new home. This is tangential to the original purpose of this repository and may eventually get its own home.
-
-
 ### Housekeeping
 
 An overview of this repository's files for the weekly posts detailed below:
